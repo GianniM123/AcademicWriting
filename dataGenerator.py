@@ -6,7 +6,6 @@
 #HCOs 
 
 import random
-import numpy
 from carbrands import carBrands, carTypes
 from file import File
 
@@ -38,7 +37,6 @@ def createRandomStats(count):
 def main():
     file = File("Data.csv")
     list = createRandomStats(dataCount)
-    print(*list, sep = "\n")
     for i in range(len(list)): 
         for j in range(len(list[i])-1): 
             file.writeSingleValue(str(list[i][j]))
